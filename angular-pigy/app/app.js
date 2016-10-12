@@ -7,5 +7,7 @@ angular.module('pigy', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-  $routeProvider.otherwise({redirectTo: '/book',templateUrl:"book.html"});
+  $routeProvider
+  .when("/music",{template:"<music-detail></music-detail>"})
+  .otherwise({redirectTo: '/book',templateUrl:"book.html"});
 }]);
