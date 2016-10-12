@@ -40,6 +40,15 @@ body {
 	line-height: 56px;
 }
 
+.mui-title img {
+    height: 45px;
+    margin-bottom: 4px;
+}
+
+.mui-title * {
+    vertical-align: middle;
+}
+
 .mui-content {
 	background: #6DE3E9 url(../img/bg.png) top no-repeat fixed;
 	background-size: cover;
@@ -118,8 +127,8 @@ body {
 	overflow: hidden;
 }
 .u-content-music,.u-content-video,.u-content-txt{
-	width: 100% !important;
-	/*height: 100% !important;*/
+	/*width: 100% !important;
+	height: 100% !important;*/
 }
 .u-content div:first-of-type img {
 	border-radius: 10px;
@@ -129,9 +138,11 @@ body {
 	overflow: hidden;
 }
 .u-content-music img:first-of-type{
-	float: left !important;
-	margin-right: 20px;
-	margin-left: 10px;
+	    border-radius: 10px;
+    border: 1px solid #D04A14;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
 }
 .u-content-txt img:first-of-type{
 	width: 100% !important;
