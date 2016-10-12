@@ -1,0 +1,65 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="pigy" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="pigy" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="pigy" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="pigy" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>任务详情</title>
+		<link rel="stylesheet" href="../../bower_components/html5-boilerplate/dist/css/normalize.css">
+  		<link rel="stylesheet" href="../../bower_components/html5-boilerplate/dist/css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+
+	<body>
+		<div ng-view></div>
+		<div id="u-share" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view" style="background-color: lightcyan">
+				<li class="mui-table-view-cell">
+					<a href="#">分享到新浪微博</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到QQ空间</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到豆瓣</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view" style="background-color: lightcyan">
+				<li class="mui-table-view-cell">
+					<a href="#u-share"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<nav class="mui-bar mui-bar-tab u-bar-bottom">
+			<a class="mui-tab-item mui-active" href="#!/book">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">图书</span>
+			</a>
+			<a class="mui-tab-item" href="#!/music">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">音乐</span>
+			</a>
+			<a class="mui-tab-item" href="#!/video">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">视频</span>
+			</a>
+			<a class="mui-tab-item" href="#!/txt">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">图文</span>
+			</a>
+		</nav>
+		<script src="../../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/share.js"></script>
+		<script src="../../bower_components/angular/angular.js"></script>
+  		<script src="../../bower_components/angular-route/angular-route.js"></script>
+		<script src="js/detail.js"></script>
+		<script src="../../app.js"></script>
+	</body>
+
+</html>
