@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var db = require("./node/db.js");
 
 app.get("/", function(req, res) {
 	res.redirect("/pigbank/detail");

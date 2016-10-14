@@ -13,6 +13,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 		})
 		.otherwise({
 			redirectTo: '/book',
-			templateUrl: "content/book.html"
+			template: "<book-detail></book-detail>"
 		});
+		/*.otherwise({
+			redirectTo: '/book',
+			templateUrl: "content/book.html"
+		});*/
 }]);

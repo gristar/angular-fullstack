@@ -1,8 +1,8 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" ng-app="pigy" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="pigy" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="pigy" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="pigy" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="zh-CN" ng-app="pigy" class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,18 @@
   		<link rel="stylesheet" href="../../bower_components/html5-boilerplate/dist/css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.animations.css" />
+		
+		<script src="../../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/share.js"></script>
+		<script src="../../bower_components/angular/angular.js"></script>
+  		<script src="../../bower_components/angular-animate/angular-animate.js"></script>
+  		<script src="../../bower_components/angular-route/angular-route.js"></script>
+		<script src="js/detail.js"></script>
+		<script src="app.js"></script>
+		<!--<script src="app.animations.js"></script>-->
 	</head>
 
 	<body>
@@ -20,7 +32,7 @@
 			<h1 class="mui-title"><img src="img/appname.png"></h1>
 			<!--<a href="#u-share"><div id="info" class="mui-pull-right u-share"></div></a>-->
 		</header>
-		<div ng-view></div>
+		<div ng-view class="view-frame"></div>
 		<div id="u-share" class="mui-popover mui-popover-action mui-popover-bottom">
 			<ul class="mui-table-view" style="background-color: lightcyan">
 				<li class="mui-table-view-cell">
@@ -57,14 +69,6 @@
 				<span class="mui-tab-label">图文</span>
 			</a>
 		</nav>
-		<script src="../../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-		<script src="js/mui.min.js"></script>
-		<script src="js/jquery-3.0.0.min.js"></script>
-		<script src="js/share.js"></script>
-		<script src="../../bower_components/angular/angular.js"></script>
-  		<script src="../../bower_components/angular-route/angular-route.js"></script>
-		<script src="js/detail.js"></script>
-		<script src="app.js"></script>
 	</body>
 
 </html>
