@@ -17,3 +17,26 @@
   animation: 5s fade-out;
   z-index: 99;
 }
+
+.u-thinkitem.ng-enter,
+.u-thinkitem.ng-leave,
+.u-thinkitem.ng-move {
+  overflow: hidden;
+  transition: 2s linear all;
+}
+
+.u-thinkitem.ng-enter,
+.u-thinkitem.ng-leave.ng-leave-active,
+.u-thinkitem.ng-move {
+  height: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+.u-thinkitem.ng-enter.ng-enter-active,
+.u-thinkitem.ng-leave,
+.u-thinkitem.ng-move.ng-move-active {
+  height: 100%;
+  opacity: 1;
+  margin-top: 12px;
+}
