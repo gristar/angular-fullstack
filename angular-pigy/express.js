@@ -15,7 +15,7 @@ app.get('/test', function(req, res) {
 })
 
 app.get('/download', function(req, res) {
-	res.download("bower.json", "测试文件");
+	res.download("bower.json", "文件");
 })
 
 app.use(express.static('app'));

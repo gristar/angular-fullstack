@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('pigy', [
 	'ngRoute',
+	'ngAnimate',
 	'pigy.detail'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -11,6 +12,9 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 		.when("/music", {
 			template: "<music-detail></music-detail>"
 		})
+		/*.when("/music/:musicId", {
+			template: "<music-detail></music-detail>"
+		})*/
 		.otherwise({
 			redirectTo: '/book',
 			template: "<book-detail></book-detail>"

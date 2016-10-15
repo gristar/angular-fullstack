@@ -9,12 +9,12 @@
 }
 
 .view-frame.ng-enter {
-  animation: 5s fade-in;
+  animation: .25s fade-in;
   z-index: 100;
 }
 
 .view-frame.ng-leave {
-  animation: 5s fade-out;
+  animation: .25s fade-out;
   z-index: 99;
 }
 
@@ -22,7 +22,7 @@
 .u-thinkitem.ng-leave,
 .u-thinkitem.ng-move {
   overflow: hidden;
-  transition: 2s linear all;
+  transition: .25s linear all;
 }
 
 .u-thinkitem.ng-enter,
