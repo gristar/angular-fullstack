@@ -28,9 +28,11 @@ var createDialog = function(id, title, okfn) {
 }
 
 function createSlide(){
-	$(".cs-spread").each(function(i,v){
+	$(".cs_page").each(function(i,v){
+		var id = $(this).prop("id");
+		console.log(id,"id");
 		TouchSlide({ 
-			slideCell:this,
+			slideCell:id,
 			titCell:".hd ul",
 			autoPage:true,
 			pnLoop:"false"
