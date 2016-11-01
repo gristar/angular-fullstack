@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>动态模块化</title>
+		<link rel="stylesheet" type="text/css" href="../../common/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../../common/artdialog/css/ui-dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/content.css">
+		<link rel="stylesheet" type="text/css" href="css/iLight.css">
+		<link rel="stylesheet" type="text/css" href="css/iphone.css" />
+		<link rel="stylesheet" type="text/css" href="css/slide.css" />
+	</head> 
+
+	<body>
+		<section id="content">
+			<nav>
+				<button type="button" class="btn btn-default u-back">返回</button>
+				<!--<div class="u-nav">
+					<ul class="nav nav-pills">
+						<li role="presentation" class="active" data-id="cloudMusic"><a href="javascript:;">音乐</a></li>
+						<li role="presentation" data-id="radio"><a href="javascript:;">电台</a></li>
+						<li role="presentation" data-id="me"><a href="javascript:;">我的</a></li>
+						<li role="presentation" title="管理"><a href="javascript:;">管理</a></li>
+					</ul>
+				</div>-->
+			</nav>
+			<div id="iphone5">
+				<div id="iphone-border">
+					<div id="power-button"></div>
+					<div id="voice-toogle"></div>
+					<div id="voice-plus"></div>
+					<div id="voice-minus"></div>
+					<div id="home-button"></div>
+					<div id="dynamic"></div>
+					<div id="phone-camera"></div>
+					<div id="iphone-panel">
+						<div id="iphone-display">
+							<div id="headline">
+								<div id="net"></div>
+								<span>snaillove</span>
+								<div id="wifi">
+									<div class="dot"></div>
+								</div>
+								<div id="headline-time">18:36PM</div>
+								<div id="battery"></div>
+							</div>
+							<div id="cloudMusic" class="pagetmp">
+								<div class="cs-mg-nav">
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn">管理</button>
+									<ul>
+										<li class="cs-active">音乐</li>
+										<li>电台</li>
+										<li>我的</li>
+									</ul>
+								</div>
+								<div class="u-banner slideBox" id="slide-banner">
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="u-banner-nav hd">
+										<ul>
+											<li class="on">1</li>
+											<li class="">2</li>
+											<li class="">3</li>
+										</ul>
+									</div>
+									<div class="u-banner-content bd">
+										<ul>
+											<li>
+												<a href="javascript:;" target="_blank"><img src="../img/banner01.jpg" /></a>
+											</li>
+											<li>
+												<a href="javascript:;" target="_blank"><img src="../img/banner02.jpg" /></a>
+											</li>
+											<li>
+												<a href="javascript:;" target="_blank"><img src="../img/scene-summer.jpg" /></a>
+											</li>
+										</ul>
+									</div>
+									<a class="u-banner-prev prev" href="javascript:void(0)"></a>
+									<a class="u-banner-next next" href="javascript:void(0)"></a>
+								</div>
+								<div class="u-entry-content" id="slide-nav">
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="bd">
+										<ul>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+										</ul>
+										<ul>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content cs-scroller" id="slide-nav1">
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="scroller-wrapper">
+										<div class="bd" id="scroller">
+											<ul>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">最新</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">最新</p>
+												</li>
+												<!--<p class="intro">（app端）可左右滑动</p>-->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="u-entry-content" id="slide-nav2">
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="bd">
+										<ul>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+										</ul>
+										<ul>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content u-entry-content-entry" id="spread_six">
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="bd">
+										<ul>
+											<p class="more" data-showcount="6">展开</p>
+											<li>
+												<p title="喜马拉雅">历史</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">科技</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">名人</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">脱口秀</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">百家讲坛</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">生活</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">名人</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">脱口秀</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">名人</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">脱口秀</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">百家讲坛</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">生活</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content u-entry-content-entry" id="spread_eight">
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href=''">管理</button>
+									<div class="bd">
+										<ul>
+											<p class="more" data-showcount="8">展开</p>
+											<li>
+												<p title="喜马拉雅">小说</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">资讯</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">历史</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">科技</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">名人</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">脱口秀</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">百家讲坛</p>
+											</li>
+											<li>
+												<p title="喜马拉雅">生活</p>
+											</li>
+											<!-- hidden -->
+											<li class="u-hidden">
+												<p title="喜马拉雅">名人</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">脱口秀</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">百家讲坛</p>
+											</li>
+											<li class="u-hidden">
+												<p title="喜马拉雅">生活</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card">
+									<!--<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" style="right: 52px;">修改板式</button>-->
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理banner图" onclick="javascript:location.href='dynamic-mg-card.html'">管理卡片</button>
+									<div class="u-title">流行单曲<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/3.jpg" />
+												<p>一生中最爱</p>
+												<p title="陈奕迅">陈奕迅</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>Sku' Ha' Gået Hjem</p>
+												<p title="Sys Bjerre">Sys Bjerre</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>Jocelin </p>
+												<p title="Leddra Chapman">Leddra Chapman</p>
+											</li>
+											<li><img src="../img/3.jpg" />
+												<p>一生中最爱</p>
+												<p title="陈奕迅">陈奕迅</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>Sku' Ha' Gået Hjem</p>
+												<p title="Sys Bjerre">Sys Bjerre</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>Sku' Ha' Gået Hjem</p>
+												<p title="Sys Bjerre">Sys Bjerre</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card1">
+									<div class="u-title">最新MV<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/3.jpg" />
+												<span class="cs-card-top-right-number">12322</span>
+												<p>一生中最爱</p>
+												<p title="陈奕迅">陈奕迅</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<span class="cs-card-top-right-number">4345</span>
+												<p>Sku' Ha' Gået Hjem</p>
+												<p title="Sys Bjerre">Sys Bjerre</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<span class="cs-card-top-right-number">4566</span>
+												<p>Jocelin </p>
+												<p title="Leddra Chapman">Leddra Chapman</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<span class="cs-card-top-right-number">7645</span>
+												<p>Jocelin </p>
+												<p title="Leddra Chapman">Leddra Chapman</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card2">
+									<div class="u-title">独家专栏<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/banner01.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>一生中最爱</p>
+											</li>
+											<li><img src="../img/banner02.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>音乐专栏一丝白发就如一叶落而知秋</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card3">
+									<div class="u-title">独家专栏<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul class="u-one">
+											<li><img src="../img/banner02.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>音乐专栏一丝白发就如一叶落而知秋</p>
+											</li>
+										</ul>
+										<ul class="u-two">
+											<li><img src="../img/3.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>一生中最爱</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>音乐专栏一丝白发就如一叶落而知秋</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card4">
+									<div class="u-title">最新歌曲<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/3.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>Grapevine Valentine</p>
+												<p>Kingsfoil</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>Smile Like You Used To</p>
+												<p>Tim Walker</p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<div class="cs-card-top-left-icon"><img src="../img/icon_top_left.png" alt="图文icon"/></div>
+												<p>You Don't Know Me (feat. Brodie Barclay) </p>
+												<p>Ofenbach</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card5">
+									<div class="u-title">热门电台<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/3.jpg" />
+												<p>那些歌儿</p>
+												<p>58.7万　<span>94集</span></p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>你所不知道的抗日战争--抗日战抗日战抗日战</p>
+												<p>535.7万　<span>73集</span></p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>逻辑思维</p>
+												<p>2940万　<span>189集</span></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card6">
+									<div class="u-title">热门电台<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li><img src="../img/3.jpg" />
+												<p>那些歌儿</p>
+												<p class="u-c-lightgray">你所不知道的抗日战争--抗日战抗日战抗日战</p>
+												<p>58.7万　<span>94集</span></p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>你所不知道的抗日战争--抗日战抗日战抗日战</p>
+												<p class="u-c-lightgray">你所不知道的抗日战争--抗日战抗日战抗日战</p>
+												<p>535.7万　<span>73集</span></p>
+											</li>
+											<li><img src="../img/2.jpg" />
+												<p>逻辑思维</p>
+												<p class="u-c-lightgray">你所不知道的抗日战争--抗日战抗日战抗日战</p>
+												<p>2940万　<span>189集</span></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-card" id="u-card7">
+									<div class="u-title">蜗爱排行榜<span class="u-showall">查看全部</span></div>
+									<div class="u-content">
+										<ul>
+											<li>
+												<div style="background: url(../img/2.jpg) no-repeat center/cover">流行音乐</div>
+												<p>Right Here Waiting</p>
+												<p>Nothing's Gonna Change My Love for You</p>
+												<p>I Don't Mind If You Don't Mind</p>
+											</li>
+											<li>
+												<div style="background: url(../img/3.jpg) no-repeat center/cover">儿童音乐</div>
+												<p>全世界谁倾听你</p>
+												<p>你在终点等我</p>
+												<p>致姗姗来迟的你</p>
+											</li>
+											<li>
+												<div style="background: url(../img/2.jpg) no-repeat center/cover">古典音乐</div>
+												<p>蓝瘦香菇</p>
+												<p>Pen Pineapple Apple Pen</p>
+												<p>童话镇</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content u-entry-content-entry cs-spread" id="spread_1">
+									<button type="button" class="btn btn-default btn-sm u-banner-mg-btn" title="管理信息展示" onclick="javascript:location.href='dynamic-mg-information.html'">管理信息展示</button>
+									<div class="cs-spread-title-left">分类</div>
+									<div class="bd">
+										<ul>
+											<p class="more" data-showcount="12">展开</p>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											
+											<li class="icon u-hidden"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon u-hidden"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon u-hidden"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content cs-spread" id="page_1">
+									<div class="cs-spread-title-left">分类</div>
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<div class="bd">
+										<ul>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+										<ul>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content cs-spread" id="page_2">
+									<div class="cs-spread-title-left">分类</div>
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<div class="bd">
+										<ul>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+										<ul>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content cs-spread" id="page_3">
+									<div class="cs-spread-title-left">分类</div>
+									<div class="hd">
+										<span class="next"></span>
+										<ul></ul>
+										<span class="prev"></span>
+									</div>
+									<div class="bd">
+										<ul>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/01.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+										<ul>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">经典必听</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">最新</p>
+											</li>
+											<li class="icon"><img src="../img/2.jpg">
+												<p title="喜马拉雅">情景</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="u-entry-content cs-scroller" id="slide1">
+									<div class="cs-spread-title-left">分类</div>
+									<div class="scroller-wrapper">
+										<div class="bd" id="scroller">
+											<ul>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">最新</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon"><img src="../img/01.jpg">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="u-entry-content cs-scroller" id="slide2">
+									<div class="cs-spread-title-left">分类</div>
+									<div class="scroller-wrapper">
+										<div class="bd" id="scroller">
+											<ul>
+												<li class="icon" style="background: url(../img/2.jpg) no-repeat center/cover;">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon" style="background: url(../img/2.jpg) no-repeat center/cover;">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+												<li class="icon" style="background: url(../img/2.jpg) no-repeat center/cover;">
+													<p title="喜马拉雅">最新</p>
+												</li>
+												<li class="icon" style="background: url(../img/2.jpg) no-repeat center/cover;">
+													<p title="喜马拉雅">情景</p>
+												</li>
+												<li class="icon" style="background: url(../img/2.jpg) no-repeat center/cover;">
+													<p title="喜马拉雅">经典必听</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<script src="js/TouchSlide.1.1.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/hander.js"></script>
+		<script src="js/scroll.js"></script>
+	</body>
+
+</html>

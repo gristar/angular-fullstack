@@ -387,3 +387,42 @@ p.u-bookcontent img{
 	background: white;
 	position: fixed;
 }
+.u-moments{
+    background-color: rgba(0,0,0,.4);
+    min-width: 47px;
+    float: right;
+    height: 22px;
+    margin-right: 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+.u-moments *{
+	vertical-align: middle;
+}
+.u-moments img{
+	width: 16px;
+	height: auto;
+	margin-right: 4px;
+}
+.u-thinkcontentfoot div:first-child{
+	float: left;
+}
+.u-thinkcontentfoot{
+	margin-top: 8px;
+	height: 27px;
+	width: 69vw;
+}
+.u-comment-ls{
+	clear: both;
+	padding: 10px;
+    background-color: rgba(224,255,255,.5);
+}
+.u-comment-ls p{
+	color: black;
+	margin-bottom: 2px;
+}
+.u-comment-ls p:first-child{
+	color: #6D4E97;
+}

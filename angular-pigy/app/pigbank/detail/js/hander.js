@@ -25,3 +25,8 @@ $(function() {
 	})
 })
 var hash = location.hash;
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#view', { scrollX: true, freeScroll: true });
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
