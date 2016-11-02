@@ -61,24 +61,6 @@ function noSelect(){
 	}
 }
 
-function clock() {
-	var d = new Date();
-	var date = d.getDate();
-	h = d.getHours(), m = d.getMinutes(), s = d.getSeconds();
-	timehtml = h + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + (h > 12 ? "PM" : "AM");
-	$("#headline-time").html(timehtml);
-	setInterval("update()", 1000);
-}
-
-function update() {
-	var d = new Date();
-	var h = d.getHours(),
-		m = d.getMinutes(),
-		s = d.getSeconds();
-	timehtml = h + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + (h > 12 ? "PM" : "AM");
-	$("#headline-time").html(timehtml);
-}
-
 $.ajaxSetup({
 	cache: false,
 	error: function(xhr, status, e) {

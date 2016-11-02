@@ -1,6 +1,6 @@
 .slideBox {
-	width: 100%;
-	height: 168px;
+	width: 100vw;
+	height: 30vh;
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #ddd;
@@ -49,8 +49,8 @@
 }
 
 .slideBox .bd img {
-	width: 100%;
-	height: 168px;
+	width: 100vw;
+	height: 30vh;
 	display: block;
 }
 

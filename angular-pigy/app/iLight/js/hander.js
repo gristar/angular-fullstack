@@ -1,5 +1,4 @@
 $(function() {
-	clock();
 	$("nav .nav-pills").on("click", "li", function() {
 		var eleId = $(this).data("id");
 		$("nav .nav-pills li").removeClass("active");

@@ -8,6 +8,7 @@ function loaded () {
 		return width;
 	});
 	$(".scroller-wrapper").each(function(i,v){
+		console.log(v.getAttribute("class"),"scroller element");
 		new IScroll(this, { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
 	})
 }
