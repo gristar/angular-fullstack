@@ -1,4 +1,4 @@
-body {
+html,body {
 	font-family: "microsoft yahei";
 	background: #F0F0F0;
 }
@@ -285,7 +285,7 @@ li {
 
 .u-card .u-content ul li {
 	width: 33.3333333333vw;
-	margin: 4px -2px;
+	margin: 4px -3px;
 	padding: 0 14px;
 	cursor: pointer;
 	text-align: center;
@@ -310,20 +310,20 @@ li {
 .cs-card-top-right-number {
 	position: absolute;
 	top: 1px;
-	right: 4px;
+	right: 18px;
 	color: white;
 }
 
 .cs-card-top-left-icon {
 	position: absolute;
 	top: 1px;
-	left: 4px;
+	left: 16px;
 	width: 16px;
 	height: 20px;
 }
 
 .cs-card-top-left-icon img {
-	width: 100%;
+	width: 100% !important;
 	height: 100% !important;
 }
 
@@ -364,23 +364,22 @@ li {
 
 #u-card2 .u-content ul li {
 	width: 100vw;
-	height: 50vw;
 }
 
 #u-card2 .u-content ul li img {
-	height: 50vw;
+	height: 40vw;
 }
 
 #u-card3 ul.u-one li {
-	width: 267px;
+	width: 100vw;
 }
 
 #u-card3 ul li img {
-	height: 102px;
+	height: 40vw;
 }
 
 #u-card3 ul.u-two li {
-	width: 118px;
+	width: 50vw;
 }
 
 #u-card2 p,
@@ -390,8 +389,8 @@ li {
 
 #u-card4 .u-content ul li,
 #u-card5 .u-content ul li {
-	width: 267px;
-	height: 55px;
+    width: 100vw;
+    height: 20vw;
 }
 
 #u-card4 .u-content ul li img,
@@ -410,8 +409,8 @@ li {
 }
 
 #u-card6 .u-content ul li {
-	width: 267px;
-	height: 80px;
+    width: 100vw;
+    height: 25vw;
 }
 
 #u-card6 .u-content ul li img {
@@ -431,9 +430,13 @@ li {
 	color: lightgray !important;
 }
 
+#u-card7{
+	margin-bottom: 0;
+}
+
 #u-card7 .u-content ul li {
-	width: 267px;
-	height: 80px;
+    width: 100vw;
+    height: 26vw;
 }
 
 #u-card7 .u-content ul li div {

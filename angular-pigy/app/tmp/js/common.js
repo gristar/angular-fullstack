@@ -11,6 +11,7 @@ $(function(){
 		}
 		$(this).parent().find("li:gt("+showCount+")").slideToggle();
 	})
+	loaded();
 	createSlide();
 })
 
@@ -30,7 +31,6 @@ var createDialog = function(id, title, okfn) {
 function createSlide(){
 	$(".cs_page").each(function(i,v){
 		var id = $(this).prop("id");
-		console.log(id,"id");
 		TouchSlide({ 
 			slideCell:id,
 			titCell:".hd ul",
@@ -41,9 +41,21 @@ function createSlide(){
 	
 }
 
+function loaded () {
+	$(".cs-scroller .bd ul").css("width",function(i,v){
+		var w = $($(".cs-scroller .bd ul").get(i)).children().outerWidth(true);
+		var width = $(".cs-scroller .bd ul").get(i).children.length*w + "px";
+		return width;
+	});
+	$(".scroller-wrapper").each(function(i,v){
+		console.log(v.getAttribute("class"),"scroller element");
+		new IScroll(this, { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	})
+}
+
 function noDragImg(){
 	for(var i=0; i++; i<document.images.length){
-		document.images[i].ondragstart=function (){console.log("nodrag");return false;};
+		document.images[i].ondragstart=function (){return false;};
 	}
 }
 
