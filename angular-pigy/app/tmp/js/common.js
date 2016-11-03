@@ -29,6 +29,14 @@ var createDialog = function(id, title, okfn) {
 }
 
 function createSlide(){
+	TouchSlide({ 
+		slideCell:"slide-banner",
+		titCell:".hd ul",
+		autoPage:true,
+		pnLoop:true,
+		autoPlay:true,
+		
+	});
 	$(".cs_page").each(function(i,v){
 		var id = $(this).prop("id");
 		TouchSlide({ 
@@ -38,7 +46,6 @@ function createSlide(){
 			pnLoop:"false"
 		});
 	})
-	
 }
 
 function loaded () {
