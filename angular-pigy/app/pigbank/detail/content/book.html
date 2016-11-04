@@ -29,9 +29,9 @@
 						{{think.describe}}
 					</div>
 					<div ng-show="{{think.images.length > 0}}" class="u-thinkcontentimg">
-						<div ng-repeat="thinkimg in think.images"><img src="{{thinkimg.thumbnail_240x240}}" /></div>
+						<div ng-repeat="thinkimg in think.images"><img class="cs-show" src="{{thinkimg.thumbnail_240x240}}" /></div>
 					</div>
-					<div class="u-thinkcontentfoot">
+					<div class="u-thinkcontentfoot" ng-show="{{think.plan_date}}">
 						<div>{{think.plan_date}}</div>
 					</div>
 				</div>

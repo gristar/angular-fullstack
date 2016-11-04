@@ -426,3 +426,10 @@ p.u-bookcontent img{
 .u-comment-ls p:first-child{
 	color: #6D4E97;
 }
+
+.u-comment-item{
+	border-bottom: 1px dashed white;
+}
+.u-comment-item:last-child{
+	border-bottom: none;
+}

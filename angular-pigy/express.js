@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var db = require("./node/db.js");
+var user = db.user;
 
 app.get("/", function(req, res) {
 	res.redirect("/pigbank/detail");
@@ -13,6 +14,11 @@ app.get("/pigbank", function(req, res) {
 app.get('/test', function(req, res) {
 	res.send('test');
 })
+
+app.get('/db', function(req, res) {
+	res.send(user);
+})
+
 
 app.get('/download', function(req, res) {
 	res.download("bower.json", "文件");
