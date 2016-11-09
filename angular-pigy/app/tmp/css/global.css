@@ -1,6 +1,8 @@
-html,body {
+html,
+body {
 	font-family: "microsoft yahei";
 	background: #F0F0F0;
+	overflow-x: hidden;
 }
 
 #content {
@@ -389,8 +391,8 @@ li {
 
 #u-card4 .u-content ul li,
 #u-card5 .u-content ul li {
-    width: 100vw;
-    height: 20vw;
+	width: 100vw;
+	height: 20vw;
 }
 
 #u-card4 .u-content ul li img,
@@ -409,8 +411,8 @@ li {
 }
 
 #u-card6 .u-content ul li {
-    width: 100vw;
-    height: 25vw;
+	width: 100vw;
+	height: 25vw;
 }
 
 #u-card6 .u-content ul li img {
@@ -430,13 +432,13 @@ li {
 	color: lightgray !important;
 }
 
-#u-card7{
+#u-card7 {
 	margin-bottom: 0;
 }
 
 #u-card7 .u-content ul li {
-    width: 100vw;
-    height: 26vw;
+	width: 100vw;
+	height: 26vw;
 }
 
 #u-card7 .u-content ul li div {
@@ -459,7 +461,7 @@ li {
 
 .cs-mg-nav {
 	background-color: white;
-	width: 100%;
+	/*width: 100%;*/
 	position: relative;
 }
 
@@ -468,14 +470,21 @@ li {
 	background-color: #091B29;
 }
 
+.cs-mg-nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
 .cs-mg-nav ul li {
-	display: inline-block;
+	/*display: inline-block;*/
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px;
 	color: white;
 	font-size: 14px;
 	cursor: pointer;
+	float: left;
 }
 
 .cs-mg-nav ul li.cs-active {
@@ -534,14 +543,14 @@ li {
 	height: 124px;
 }
 
-#slide2{
+#slide2 {
 	height: 122px;
 }
 
 #slide2 ul li {
-	height: 19vw;
-	width: 19vw;
-	line-height: 19vw;
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
 	margin: 3px 3vw;
 	border-radius: 100%;
 	color: white;
@@ -549,4 +558,15 @@ li {
 
 #slide2 ul li p {
 	margin-top: 0;
+}
+
+.g-top-nav {
+	height: 40px;
+	background-color: black;
+}
+
+.g-clear:after {
+	content: "";
+	display: block;
+	clear: both;
 }

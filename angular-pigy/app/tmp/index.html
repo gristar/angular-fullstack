@@ -8,20 +8,26 @@
 		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<!--<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css"/>-->
 		<link rel="stylesheet" type="text/css" href="../bower_components/artDialog/css/ui-dialog.css" />
-		<link rel="stylesheet" type="text/css" href="css/iLight.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
 		<link rel="stylesheet" type="text/css" href="css/slide.css" />
 	</head>
 
 	<body>
 		<section id="content">
 			<div id="cloudMusic" class="pagetmp">
-				<div class="cs-mg-nav">
-					<button type="button" class="btn btn-default btn-sm u-banner-mg-btn">管理</button>
-					<ul>
-						<li class="cs-active">音乐</li>
-						<li>电台</li>
-						<li>我的</li>
-					</ul>
+				<div class="g-top-nav">
+					<div class="scroller-wrapper">
+						<div class="cs-mg-nav" id="scroller">
+							<ul class="g-top-nav-ul">
+								<li class="cs-active">音乐</li>
+								<li>电台</li>
+								<li>我的</li>
+								<li>我的都是输</li>
+								<li>我的是</li>
+								<li>我的是大哥大哥</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="u-banner slideBox" id="slide-banner">
 					<div class="u-banner-nav hd">
@@ -395,7 +401,7 @@
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="js/TouchSlide.1.1.js"></script>
 		<script src="../bower_components/artDialog/dist/dialog-min.js"></script>
-		<script src="js/common.js"></script>
+		<script src="js/hander.js"></script>
 		<script src="../bower_components/iscroll/build/iscroll.js"></script>
 	</body>
 

@@ -14,6 +14,7 @@ $(function(){
 	loaded();
 	createSlide();
 })
+setTopNavUlWidth();
 
 var createDialog = function(id, title, okfn) {
 	var d = dialog({
@@ -58,6 +59,17 @@ function loaded () {
 		console.log(v.getAttribute("class"),"scroller element");
 		new IScroll(this, { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
 	})
+}
+
+function setTopNavUlWidth(){
+	var topNavUl = document.getElementsByClassName("g-top-nav-ul")[0],
+	width = 0;
+	for(var i=0;i<topNavUl.children.length;i++){
+		var offsetWidth = topNavUl.children[i].offsetWidth;
+		width+=offsetWidth;
+		console.log(width,"ul_width");
+	}
+	topNavUl.style.width = width + "px";
 }
 
 function noDragImg(){
