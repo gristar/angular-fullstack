@@ -4,7 +4,7 @@
 angular.module('pigy', [
 	'ngRoute',
 	'ngAnimate',
-	'pigy.detail'
+	'pigy.component'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');
@@ -15,6 +15,9 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 		/*.when("/music/:musicId", {
 			template: "<music-detail></music-detail>"
 		})*/
+		.when("/think-add", {
+			template: "<think-add></think-add>"
+		})
 		.otherwise({
 			redirectTo: '/book',
 			template: "<book-detail></book-detail>"

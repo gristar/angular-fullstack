@@ -1,5 +1,5 @@
 'use strict'
-angular.module("pigy.detail", ["ngRoute"])
+angular.module("pigy.component", ["ngRoute"])
 	.component('musicDetail', {
 		templateUrl: 'content/music.html',
 		controller: ['$routeParams', "$http",
@@ -27,6 +27,14 @@ angular.module("pigy.detail", ["ngRoute"])
 				}, function(error) {
 					console.log(error, "error");
 				});
+			}
+		]
+	})
+	.component('thinkAdd', {
+		templateUrl: 'content/add.html',
+		controller: ['$routeParams', "$http",
+			function ThinkAddController($routeParams, $http) {
+				
 			}
 		]
 	});
