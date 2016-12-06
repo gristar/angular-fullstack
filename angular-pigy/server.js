@@ -1,6 +1,8 @@
 var express = require('express');
+var session = require('session');
 var path = require('path');
 var fs = require("fs");
+var auth = require('./node/routes/auth');
 var index = require('./node/routes/index');
 var users = require('./node/routes/users');
 var test = require('./node/routes/test');
@@ -18,11 +20,14 @@ app.use(function(req, res, next) {
 	fileUtils.writeLog("访问记录："+req.toString() + ";" + (new Date()).toLocaleString() + "<br/>\n");
 	next();
 });
+app.use('/', auth);
 app.use('/', index);
 app.use('/user', users);
 app.use('/test', test);
 app.use('/basic', basic);
 app.use(express.static('app'));
+app.use(express.static('C:/nginx-1.10.1/html'));
+app.use('/file', express.static('f:/file'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -42,7 +47,7 @@ app.use(function(err, req, res, next) {
 	res.render('error');
 });
 
-var server = app.listen(8000, function() {
+var server = app.listen(8088, function() {
 
 	var host = server.address().address
 	var port = server.address().port

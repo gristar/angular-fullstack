@@ -15,4 +15,12 @@ userScheMa.methods.speak = function() {
 	var greeting = this.name ? "Meow name is " + this.name : "I don't have a name"
 	console.log(greeting);
 }
+
+var albumScheMa = mongoose.Schema({
+	src: String,
+	title: String,
+	status: String,
+	summary: String
+})
 exports.User = mongoose.model('users', userScheMa); //	与users集合关联
+exports.Album = mongoose.model('albums', albumScheMa);
