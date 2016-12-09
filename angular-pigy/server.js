@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 
 app.use(function(req, res, next) {
 	//console.log('Time:', (new Date()).toLocaleString());
-	fileUtils.writeLog("访问记录："+req.toString() + ";" + (new Date()).toLocaleString() + "<br/>\n");
+	fileUtils.writeLog("访问记录："+JSON.stringify(req.ips) + ";" + (new Date()).toLocaleString() + "<br/>\n");
 	next();
 });
 app.use('/', auth);

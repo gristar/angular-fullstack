@@ -9,7 +9,6 @@ fileUtils.prototype = {
 		return this;
 	},
 	writeLog: function(content) {
-//		console.log("写入日志");
 		fs.appendFile('./file/log.txt', content, function(err) {
 			if (err) {
 				return console.error(err);
@@ -21,6 +20,13 @@ fileUtils.prototype = {
 				console.log("异步读取文件数据: " + data.toString());
 			});*/
 		});
+	},
+	writeAuthInfo: function(){
+		fs.appendFile('./file/auth.txt', content, function(err){
+			if(err){
+				return console.error(err);
+			}
+		})
 	}
 }
 module.exports = fileUtils;

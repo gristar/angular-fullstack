@@ -1,18 +1,27 @@
 html,
-body{
+body {
 	font-family: "microsoft yahei";
 }
+
+.title {
+	font-size: 16px;
+	margin: 25px 4px 10px;
+}
+
+.right {
+	color: gray;
+	float: right;
+}
+
 .box {
-	width: 90vw;
-	margin-top: -35px;
-	margin-left: -45vw;
-	position: absolute;
-	top: 45%;
-	left: 50%;
+    width: 90vw;
+    margin-top: 20px;
+    margin-left: -45vw;
+    position: absolute;
+    left: 50%;
 }
 
 .ok {
-	width: 200px;
 	margin: 0 auto;
 	text-align: center;
 }
