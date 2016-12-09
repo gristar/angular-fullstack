@@ -46,8 +46,9 @@ header .logo {
                 top: 13px;
                 left: 13px;
                 display: none;
+                cursor: pointer;
                 .ic-pc-white {
-                    background-image: url("../img/icon/ic-pc-white.svg");
+                    background-image: url("../img/ic-pc-white.svg");
                 }
                 .ic-svg {
                     display: inline-block;
@@ -58,8 +59,14 @@ header .logo {
                     background-size: contain;
                 }
                 .ic-qw-white {
-                    background-image: url("../img/icon/ic-qw-white.svg");
+                    background-image: url("../img/ic-qw-white.svg");
                 }
+            }
+            .tab-item:hover {
+                opacity: 0.8;
+            }
+            .tab-item.active {
+                display: inline-block;
             }
             .tab-bg {
                 display: inline-block;
@@ -125,6 +132,28 @@ header .logo {
                             content: '\2713';
                             background-color: #31b968;
                         }
+                        input[type=checkbox]+label:before {
+                            border-radius: 3px;
+                        }
+                        input[type=checkbox]:checked+label:before,
+                        input[type=radio]:checked+label:before {
+                            text-align: center;
+                            color: #fff;
+                            border-color: #31b968;
+                        }
+                        input[type=checkbox]+label:before,
+                        input[type=radio]+label:before {
+                            line-height: 1;
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 8px;
+                            content: '';
+                            transition: all 0.2s;
+                            color: #fff;
+                            border: 1px solid #dce4e6;
+                            background-color: #f3f6f8;
+                        }
                     }
                     .form-tips {
                         position: absolute;
@@ -137,5 +166,51 @@ header .logo {
                 }
             }
         }
+        .other-login-wrapper {
+            width: 220px;
+            padding-left: 40px;
+            border-left: 1px dashed #eee;
+            .span-box {
+                display: block;
+            }
+            .other-login {
+                margin-top: 45px;
+                .login-logo {
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    transition: all 0.2s;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .login-logo:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+footer {
+    font-size: 0.875rem;
+    line-height: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 5.5vh 0;
+    text-align: center;
+    color: #fff;
+    >div {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: left;
+    }
+    a {
+        margin: 0 2px;
+        color: white;
     }
 }

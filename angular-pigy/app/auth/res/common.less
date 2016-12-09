@@ -3,6 +3,17 @@
 :before {
     box-sizing: border-box;
 }
+html {
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    font: 400 16px/1.618 'PingFang SC','Helvetica Neue','Microsoft YaHei UI','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+}
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
@@ -20,14 +31,15 @@ input:not([type=button]) {
     outline: 0;
     background: #f3f6f8;
 }
+input:not([type=button]):focus {
+    color: #666;
+    border-color: #31b968;
+    background: #eef1f3;
+}
 button,
 hr,
 input {
     overflow: visible;
-}
-button,
-html [type=button] {
-    -webkit-appearance: button;
 }
 button,
 select {
@@ -65,6 +77,16 @@ textarea {
     -webkit-order: 3;
     order: 3;
 }
+.box-fr {
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+}
+.btn a.block,
+.btn.block {
+    display: block;
+    width: 100%;
+}
 .btn,
 .btn a {
     padding: 0.4rem 1.2rem;
@@ -73,6 +95,10 @@ textarea {
     border: 1px solid transparent;
     border-radius: 2px;
     outline: 0;
+}
+.btn-green {
+    color: #fff;
+    background: #31b968;
 }
 .btn-link,
 .btn-link a {
@@ -81,21 +107,7 @@ textarea {
     border: none;
     border-radius: 0;
 }
-.btn a.block,
-.btn.block {
-    display: block;
-    width: 100%;
-}
-.btn-green {
-    color: #fff;
-    background: #31b968;
-}
-.btn,
-.btn a {
-    padding: 0.4rem 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    outline: 0;
+.btn a.btn-lg,
+.btn.btn-lg {
+    font-size: 1.125rem;
 }

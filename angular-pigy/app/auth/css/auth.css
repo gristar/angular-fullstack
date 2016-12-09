@@ -3,6 +3,17 @@
 :before {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font: 400 16px/1.618 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei UI', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+}
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -20,14 +31,15 @@ input:not([type=button]) {
   outline: 0;
   background: #f3f6f8;
 }
+input:not([type=button]):focus {
+  color: #666;
+  border-color: #31b968;
+  background: #eef1f3;
+}
 button,
 hr,
 input {
   overflow: visible;
-}
-button,
-html [type=button] {
-  -webkit-appearance: button;
 }
 button,
 select {
@@ -65,6 +77,16 @@ textarea {
   -webkit-order: 3;
   order: 3;
 }
+.box-fr {
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+.btn a.block,
+.btn.block {
+  display: block;
+  width: 100%;
+}
 .btn,
 .btn a {
   padding: 0.4rem 1.2rem;
@@ -73,6 +95,10 @@ textarea {
   border: 1px solid transparent;
   border-radius: 2px;
   outline: 0;
+}
+.btn-green {
+  color: #fff;
+  background: #31b968;
 }
 .btn-link,
 .btn-link a {
@@ -81,23 +107,9 @@ textarea {
   border: none;
   border-radius: 0;
 }
-.btn a.block,
-.btn.block {
-  display: block;
-  width: 100%;
-}
-.btn-green {
-  color: #fff;
-  background: #31b968;
-}
-.btn,
-.btn a {
-  padding: 0.4rem 1.2rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  outline: 0;
+.btn a.btn-lg,
+.btn.btn-lg {
+  font-size: 1.125rem;
 }
 body {
   position: relative;
@@ -149,9 +161,10 @@ header .logo {
   top: 13px;
   left: 13px;
   display: none;
+  cursor: pointer;
 }
 .main-wrap .login-body .login-tabs .tab-item .ic-pc-white {
-  background-image: url("../img/icon/ic-pc-white.svg");
+  background-image: url("../img/ic-pc-white.svg");
 }
 .main-wrap .login-body .login-tabs .tab-item .ic-svg {
   display: inline-block;
@@ -162,7 +175,13 @@ header .logo {
   background-size: contain;
 }
 .main-wrap .login-body .login-tabs .tab-item .ic-qw-white {
-  background-image: url("../img/icon/ic-qw-white.svg");
+  background-image: url("../img/ic-qw-white.svg");
+}
+.main-wrap .login-body .login-tabs .tab-item:hover {
+  opacity: 0.8;
+}
+.main-wrap .login-body .login-tabs .tab-item.active {
+  display: inline-block;
 }
 .main-wrap .login-body .login-tabs .tab-bg {
   display: inline-block;
@@ -229,6 +248,28 @@ header .logo {
   content: '\2713';
   background-color: #31b968;
 }
+.main-wrap .login-body .box-aw .form-wrapper .form-item .checkbox-group input[type=checkbox] + label:before {
+  border-radius: 3px;
+}
+.main-wrap .login-body .box-aw .form-wrapper .form-item .checkbox-group input[type=checkbox]:checked + label:before,
+.main-wrap .login-body .box-aw .form-wrapper .form-item .checkbox-group input[type=radio]:checked + label:before {
+  text-align: center;
+  color: #fff;
+  border-color: #31b968;
+}
+.main-wrap .login-body .box-aw .form-wrapper .form-item .checkbox-group input[type=checkbox] + label:before,
+.main-wrap .login-body .box-aw .form-wrapper .form-item .checkbox-group input[type=radio] + label:before {
+  line-height: 1;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  content: '';
+  transition: all 0.2s;
+  color: #fff;
+  border: 1px solid #dce4e6;
+  background-color: #f3f6f8;
+}
 .main-wrap .login-body .box-aw .form-wrapper .form-item .form-tips {
   position: absolute;
   top: 100%;
@@ -236,4 +277,50 @@ header .logo {
 }
 .main-wrap .login-body .box-aw .form-wrapper .form-item .form-button {
   font-size: 1.25rem;
+}
+.main-wrap .login-body .other-login-wrapper {
+  width: 220px;
+  padding-left: 40px;
+  border-left: 1px dashed #eee;
+}
+.main-wrap .login-body .other-login-wrapper .span-box {
+  display: block;
+}
+.main-wrap .login-body .other-login-wrapper .other-login {
+  margin-top: 45px;
+}
+.main-wrap .login-body .other-login-wrapper .other-login .login-logo {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-right: 20px;
+  transition: all 0.2s;
+}
+.main-wrap .login-body .other-login-wrapper .other-login .login-logo svg {
+  width: 100%;
+  height: 100%;
+}
+.main-wrap .login-body .other-login-wrapper .other-login .login-logo:hover {
+  opacity: 0.8;
+}
+footer {
+  font-size: 0.875rem;
+  line-height: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 5.5vh 0;
+  text-align: center;
+  color: #fff;
+}
+footer > div {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
+footer a {
+  margin: 0 2px;
+  color: white;
 }
