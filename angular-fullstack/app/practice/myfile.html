@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.switch span {
+				cursor: pointer;
+			}
+			
+			.switch span.active {
+				background-color: blue;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="switch">
+				<span class="active">列表1</span>
+				<span>列表2</span>
+			</div>
+			<div class="lists">
+				<div>
+					<ul>
+						<li>数据1_1</li>
+						<li>数据1_2</li>
+						<li>数据1_3</li>
+					</ul>
+				</div>
+				<div style="display: none;">
+					加载中...
+				</div>
+			</div>
+		</div>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script>
+			var ele;
+			var data = '<ul><li>数据2_1</li><li>数据2_2</li><li>数据2_3</li></ul>';
+			$(function() {
+				var isUpdate;
+				$(".switch").on("click", "span", function() {
+					$(".lists div").hide();
+					$('.switch span').removeClass("active");
+					$(this).addClass("active");
+					ele = $(".lists div:eq(" + $(this).index() + ")");
+					ele.show();
+					if (!isUpdate) {
+						updata();
+					}
+					isUpdate = true;
+				})
+			})
+
+			function updata() {
+				setTimeout('ele.html(data)', 1000);
+			}
+		</script>
+	</body>
+
+</html>

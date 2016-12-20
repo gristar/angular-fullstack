@@ -1,0 +1,572 @@
+html,
+body {
+	font-family: "microsoft yahei";
+	background: #F0F0F0;
+	overflow-x: hidden;
+}
+
+#content {
+	min-height: 100vh;
+	width: 100vw;
+	font-family: "微软雅黑";
+	overflow-x: hidden;
+}
+
+.u-nav {
+	min-width: 300px;
+	margin: 0 auto;
+	width: 30%;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+	color: #fff;
+	background-color: #FF781F;
+}
+
+.nav>li>a {
+	padding: 8px 15px;
+}
+
+.u-banner-prev {
+	position: absolute;
+	left: 3%;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	width: 32px;
+	height: 40px;
+	background: url(../img/slider-arrow.png) -110px 5px no-repeat;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.u-banner-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	width: 32px;
+	height: 40px;
+	background: url(../img/slider-arrow.png) 8px 5px no-repeat;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	left: auto;
+	right: 3%;
+}
+
+.u-banner-nav {
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	right: 38%;
+	bottom: 5px;
+	z-index: 1;
+}
+
+.u-banner-nav ul {
+	overflow: hidden;
+	zoom: 1;
+	float: left;
+}
+
+.u-banner-nav ul li {
+	list-style: none;
+	float: left;
+	margin-right: 2px;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	background: #fff;
+	cursor: pointer;
+}
+
+.u-banner-nav ul li.on {
+	background: #f00;
+	color: #fff;
+}
+
+.u-banner {
+	width: 80%;
+	height: 160px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+
+.u-banner-content {
+	height: 100%;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.u-banner-mg-btn {
+	position: absolute;
+	right: 0px;
+	z-index: 2;
+	opacity: .4;
+}
+
+.u-banner-mg-btn:hover {
+	opacity: 1;
+}
+
+.u-banner-mg-btn:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.u-entry-type {
+	clear: both;
+	margin-top: 12px;
+	padding-left: 6px;
+}
+
+.u-entry-content {
+	margin-bottom: 10px;
+	padding: 5px 0 0;
+	position: relative;
+	background-color: white;
+}
+
+.u-entry-content .bd ul {
+	display: inline-block;
+	background-color: white;
+	width: 100%;
+	position: relative;
+}
+
+.u-entry-content img {
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+}
+
+.u-entry-content li.icon {
+	list-style: none;
+	width: 25vw;
+	height: 60px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	margin-bottom: 19px;
+}
+
+.u-entry-content li.icon p {
+	margin-top: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+}
+
+.u-entry-content:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.btn-xs {
+	border-radius: 10px;
+	padding: 0px 6px;
+}
+
+.u-entry-content li.icon button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+ul,
+li {
+	list-style: none;
+	padding: 0;
+}
+
+#slide-nav .hd ul li {
+	display: inline;
+}
+
+.hd ul li {
+	float: left;
+	margin-right: 2px;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	background: #fff;
+	cursor: pointer;
+}
+
+.hd ul li.on {
+	background: #f00;
+	color: #fff;
+}
+
+.bd ul {
+	margin-bottom: 0;
+}
+
+#slide-nav1 {
+	height: 84px;
+}
+
+#slide-nav1 .bd ul {
+	overflow: hidden;
+}
+
+#slide-nav1 .bd ul p.intro {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -59px;
+	font-size: 12px;
+	color: blue;
+	margin-bottom: 0;
+}
+
+.u-entry-content-entry .bd ul {
+	padding: 32px 0px 29px;
+	position: relative;
+}
+
+.u-entry-content-entry .bd ul p.more {
+	width: 100vw;
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	cursor: pointer;
+}
+
+.u-entry-content-entry .bd ul li {
+	float: left;
+	text-align: center;
+	width: 25vw;
+}
+
+.u-hidden {
+	display: none;
+}
+
+.u-card {
+	background-color: white;
+	width: 100%;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.u-card:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.u-card .u-title {
+	width: 100%;
+	padding: 10px;
+}
+
+.u-card .u-showall {
+	float: right;
+	cursor: pointer;
+}
+
+.u-card img {
+	width: 100%;
+}
+
+.u-card .u-content ul {
+	display: inline-block;
+}
+
+.u-card .u-content ul li {
+	width: 33.3333333333vw;
+	margin: 4px -3px;
+	padding: 0 14px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+
+.u-card .u-content ul li p {
+	margin: 5px 0;
+	text-align: left;
+}
+
+.u-card .u-content ul li p:last-child {
+	color: darkgray;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.cs-card-top-right-number {
+	position: absolute;
+	top: 1px;
+	right: 18px;
+	color: white;
+}
+
+.cs-card-top-left-icon {
+	position: absolute;
+	top: 1px;
+	left: 16px;
+	width: 16px;
+	height: 20px;
+}
+
+.cs-card-top-left-icon img {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.cs-card-item-play {
+	position: absolute;
+	top: 75px;
+	right: 2px;
+	width: 40px;
+	height: 40px;
+}
+
+#u-card7 .cs-card-item-play,
+#u-card6 .cs-card-item-play {
+	top: 38px;
+	left: 38px;
+	width: 40px !important;
+	height: 40px !important;
+	line-height: 0 !important;
+	background-color: transparent !important;
+}
+
+.cs-card-item-play img {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#u-card4 .cs-card-item-play {
+	top: 29px;
+	left: 32px;
+	width: 25px !important;
+	height: 25px !important;
+	line-height: 0 !important;
+}
+
+#u-card1 .u-content ul li {
+	width: 50vw;
+}
+
+#u-card2 .u-content ul li {
+	width: 100vw;
+}
+
+#u-card2 .u-content ul li img {
+	height: 40vw;
+}
+
+#u-card3 ul.u-one li {
+	width: 100vw;
+}
+
+#u-card3 ul li img {
+	height: 40vw;
+}
+
+#u-card3 ul.u-two li {
+	width: 50vw;
+}
+
+#u-card2 p,
+#u-card3 p {
+	color: black;
+}
+
+#u-card4 .u-content ul li,
+#u-card5 .u-content ul li {
+	width: 100vw;
+	height: 20vw;
+}
+
+#u-card4 .u-content ul li img,
+#u-card5 .u-content ul li img {
+	height: 55px;
+	width: 55px;
+	float: left;
+	margin-right: 5px;
+}
+
+#u-card4 .u-content ul li p,
+#u-card5 .u-content ul li p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#u-card6 .u-content ul li {
+	width: 100vw;
+	height: 25vw;
+}
+
+#u-card6 .u-content ul li img {
+	height: 80px;
+	width: 80px;
+	float: left;
+	margin-right: 5px;
+}
+
+#u-card6 .u-content ul li p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.u-c-lightgray {
+	color: lightgray !important;
+}
+
+#u-card7 {
+	margin-bottom: 0;
+}
+
+#u-card7 .u-content ul li {
+	width: 100vw;
+	height: 26vw;
+}
+
+#u-card7 .u-content ul li div {
+	width: 80px;
+	height: 80px;
+	float: left;
+	line-height: 80px;
+	background-color: lightblue;
+	margin-right: 5px;
+	color: white;
+}
+
+#u-card7 .u-content ul li p {
+	color: gray;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+}
+
+.cs-mg-nav {
+	background-color: white;
+	/*width: 100%;*/
+	position: relative;
+}
+
+.cs-mg-nav ul {
+	margin-bottom: 0;
+	background-color: #091B29;
+}
+
+.cs-mg-nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.cs-mg-nav ul li {
+	/*display: inline-block;*/
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	float: left;
+}
+
+.cs-mg-nav ul li.cs-active {
+	color: rgb(2, 106, 219);
+}
+
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/*width: 2400px;*/
+	/*height: 160px;*/
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+.cs-spread-title-left {
+	width: 100%;
+	padding: 10px;
+}
+
+.cs-spread img {
+	border-radius: 0;
+}
+
+.cs-spread .bd ul {
+	padding: 0 0 29px;
+}
+
+.cs-spread .hd,
+.u-entry-content .hd {
+	position: absolute;
+	bottom: 10px;
+	left: 46%;
+	z-index: 2;
+}
+
+#cs-edit {
+	border: none;
+}
+
+#slide1 {
+	height: 124px;
+}
+
+#slide2 {
+	height: 122px;
+}
+
+#slide2 ul li {
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	margin: 3px 3vw;
+	border-radius: 100%;
+	color: white;
+}
+
+#slide2 ul li p {
+	margin-top: 0;
+}
+
+.g-top-nav {
+	height: 40px;
+	background-color: black;
+}
+
+.g-clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
