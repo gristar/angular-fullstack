@@ -21,9 +21,9 @@ app.use(function(req, res, next) {
 	next();
 });
 
+app.use('/file', express.static('f:/file'));
 app.use(express.static('app'));
 app.use(express.static('C:/nginx-1.10.1/html'));
-app.use('/file', express.static('f:/file'));
 app.use('/', auth);
 app.use('/', index);
 app.use('/user', users);
