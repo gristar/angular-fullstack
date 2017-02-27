@@ -20,10 +20,10 @@ app.use(function(req, res, next) {
 	fileUtils.writeLog("访问记录："+JSON.stringify(req.ips) + ";" + (new Date()).toLocaleString() + "<br/>\n");
 	next();
 });
-
 app.use('/file', express.static('f:/file'));
 app.use(express.static('app'));
 app.use(express.static('C:/nginx-1.10.1/html'));
+app.use(express.static('D:/项目/iLight/h5/iLight'));
 app.use('/', auth);
 app.use('/', index);
 app.use('/user', users);

@@ -1,0 +1,138 @@
+.hide {
+  display: none;
+}
+
+.animate {
+  //opacity: 0;
+}
+
+@font-face {
+  font-family: hanyi_zhyt;
+  src: url('../file/hanyi_zhyt.woff');
+}
+
+.music-ctrl {
+  @w: 75px;
+  width: @w;
+  height: @w;
+  line-height: @w;
+  overflow: hidden;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  z-index: 2;
+  @media (max-width: 768px) {
+    @w: 45px;
+    width: @w;
+    height: @w;
+    line-height: @w;
+    left: 10px;
+    bottom: 10px;
+  }
+  .icon {
+    font-size: @w;
+    cursor: pointer;
+    color: #490093;
+    transition: color 1s ease 0s;
+    @media (max-width: 768px) {
+      font-size: 45px;
+    }
+  }
+}
+
+.u-arrow-bottom {
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  left: 50%;
+  bottom: 10px;
+  z-index: 150;
+  margin-left: -7px;
+  .pre-wrap {
+    width: 24px;
+    height: 14px;
+    position: relative;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -moz-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+    .pre-box1,
+    .pre-box2 {
+      height: 15px;
+      width: 11px;
+      position: absolute;
+      top: -5px;
+      overflow: hidden;
+    }
+    .pre1, .pre2 {
+      width: 14px;
+      height: 5px;
+      position: absolute;
+      box-shadow: 1px -1px 1px #646464;
+      top: 5px;
+    }
+    .pre1, .pre2, .pre3, .pre4 {
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    .pre-box2 {
+      left: 10px;
+    }
+    .pre1 {
+      transform: rotate(130deg);
+      -webkit-transform: rotate(130deg);
+      left: 1px;
+    }
+    .pre2 {
+      left: -4.5px;
+      -webkit-transform: rotate(50deg);
+      transform: rotate(50deg);
+    }
+  }
+}
+
+.u-arrow-right {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 24px;
+  z-index: 150;
+  margin-top: -10px;
+  right: 20px;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  .pre-wrap-right {
+    width: 14px;
+    height: 24px;
+    position: relative;
+    -webkit-animation: rightflip 1.5s infinite ease-in-out;
+    -moz-animation: rightflip 1.5s infinite ease-in-out;
+    animation: rightflip 1.5s infinite ease-in-out;
+  }
+  .pre-box3, .pre-box4 {
+    height: 11px;
+    width: 15px;
+    position: absolute;
+    overflow: hidden;
+  }
+  .pre-box3 {
+    top: 10px;
+  }
+  .pre3, .pre4 {
+    width: 14px;
+    height: 5px;
+    position: absolute;
+  }
+  .pre3 {
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+    top: 1px;
+    box-shadow: 1px -1px 2px #646464;
+  }
+  .pre4 {
+    top: 6px;
+    box-shadow: 1px 1px 1.5px #646464;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+  }
+}

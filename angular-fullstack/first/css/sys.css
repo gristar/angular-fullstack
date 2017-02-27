@@ -1,0 +1,126 @@
+body {
+  min-width: 771px;
+}
+.gohome {
+  text-align: center;
+  padding: 30px 19px 5px 18px;
+}
+.addcategory {
+  padding: 0 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.addcategory a {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 20px;
+  color: white;
+}
+.layui-nav * {
+  font-size: 16px;
+}
+.layui-nav-child dd.layui-this {
+  color: #eeeeee;
+  background-color: #646464!important;
+  border-left: 3px solid #009688 !important;
+}
+.layui-nav-child dd.layui-this a {
+  background: none !important;
+}
+aside .layui-nav-tree {
+  float: left;
+  width: 16.66667%;
+  min-width: 128px;
+  height: 100vh;
+}
+.mid {
+  width: 25%;
+  min-width: 193px;
+  height: 100vh;
+  border-right: 1px solid #d9d9d9;
+  overflow-y: auto;
+  overflow-x: hidden;
+  float: left;
+  margin-left: 0;
+}
+.mid .addarticle {
+  display: block;
+  padding: 20px 10px 20px 20px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+}
+.mid .list .item {
+  position: relative;
+  max-height: 90px;
+  height: 90px;
+  border-top: 1px solid #dcdcdc;
+  background-color: transparent;
+  border-left: 5px solid transparent !important;
+  cursor: pointer;
+}
+.mid .list .item:hover {
+  background-color: #ececec;
+  color: #eeeeee;
+}
+.mid .list .item .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px 30px 15px 60px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 56px;
+}
+.mid .list .item .opt {
+  position: absolute;
+  padding: 0;
+  right: 26px;
+  top: 35px;
+  display: none;
+  font-size: 16px;
+  color: #a0a0a0 !important;
+}
+.mid .list .active {
+  background-color: #ececec;
+  color: #eeeeee;
+  border-left: 5px solid #009688 !important;
+}
+.mid .list .active .opt {
+  display: block;
+  box-shadow: none;
+}
+.main {
+  width: 58.23333%;
+  min-width: 450px;
+  height: 100vh;
+  float: left;
+  position: relative;
+  padding: 20px 0 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main .title {
+  height: 50px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30px 10px 40px;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0;
+  box-shadow: none;
+}

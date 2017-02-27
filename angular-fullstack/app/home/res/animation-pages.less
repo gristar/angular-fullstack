@@ -1,0 +1,119 @@
+.profile {
+  .baseinfo {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    @media (min-width: 768px) {
+      width: 330px;
+      margin-right: 60px;
+      float: right;
+    }
+    &-body {
+      .name {
+        font-size: 4.6rem;
+        color: #962408;
+        background-image: -webkit-linear-gradient(92deg, #00AAFF, #33BBFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: bounceInLeft 1s ease both;
+
+      }
+      .info {
+        animation: fadeInUp .8s ease .7s both;
+      }
+      .phone {
+        animation: fadeInUp .8s ease 1.2s;
+        animation-fill-mode: both;
+      }
+      .email {
+        animation: fadeInUp .8s ease 1.7s;
+        animation-fill-mode: both;
+      }
+      .netname{
+        animation: fadeInUp 1.2s ease-in 2.2s both;
+      }
+    }
+  }
+}
+.skills{
+  text-align: center;
+  &-title{
+    font-size: 32px;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    animation: bounceIn 1s ease;
+    animation-fill-mode: both;
+    padding-bottom: 20px;
+  }
+  &-list{
+    ul{
+      li{
+        background: white;
+        font-size: 16px;
+        width: 80%;
+        padding: 8px 0;
+        margin: 20px auto 0;
+        &:nth-of-type(1){
+          animation: zoomIn .5s ease .7s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(2){
+          animation: zoomIn .5s ease 1s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(3){
+          animation: zoomIn .5s ease 1.2s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(4){
+          animation: zoomIn .5s ease 1.4s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(5){
+          animation: zoomIn .5s ease 1.6s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(6){
+          animation: zoomIn .5s ease 1.8s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(7){
+          animation: zoomIn .5s ease 2s;
+          animation-fill-mode: both;
+        }
+        &:nth-of-type(8){
+          animation: zoomIn .5s ease 2.2s;
+          animation-fill-mode: both;
+        }
+      }
+    }
+  }
+}
+
+.experience{
+  .body {
+    .exp {
+      padding: 50px;
+      &-brief {
+        padding-left: 15px;
+        margin-left: -25px;
+        line-height: 1.5em;
+        border-left: 10px solid #F19318;
+        .datetime {
+          color: brown;
+        }
+      }
+      &-info {
+        margin-top: 15px;
+      }
+      &:nth-child(1){
+        animation: slideInRight .8s ease;
+        animation-fill-mode: both;
+      }
+      &:nth-child(2){
+        animation: slideInRight .8s ease .6s;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}

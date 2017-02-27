@@ -1,0 +1,48 @@
+<header class="mui-bar mui-bar-nav u-nav-bar">
+	<!--<h1 class="mui-title">小猪班克</h1>-->
+	<h1 class="mui-title"><img src="img/appname.png"></h1>
+	<!--<a href="#u-share"><div id="info" class="mui-pull-right u-share"></div></a>-->
+</header>
+<div class="mui-content">
+	<div class="u-article">
+		<div class="u-title">
+			<div><img src="img/mission.png" />读书</div>
+			<div>
+				<span><img src="img/mission_point.png"/>{{$ctrl.info.comment_count}}</span>
+				<span><img src="img/mission_experience.png"/>{{$ctrl.info.finish_count}}</span>
+			</div>
+		</div>
+		<div class="u-content">
+			<div>
+				<img src="{{$ctrl.info.book.cover}}" />
+			</div>
+			<p class="u-booktitle">{{$ctrl.info.book.title}}</p>
+			<p>作者： {{$ctrl.info.book.author}}</p>
+			<p class="u-bookcontent">{{$ctrl.info.book.short_basic_facts}}</p>
+		</div>
+	</div>
+	<div class="u-think">
+		<div class="u-thinktitle">
+			<img src="img/profile_desire.png" />任务感想
+		</div>
+		<div class="u-thinklist">
+			<div class="u-thinkitem" ng-repeat="think in $ctrl.thinks">
+				<div class="u-thinkhead"><img src="{{think.head}}" /></div>
+				<div class="u-thinkcontent">
+					<div class="u-thinkcontenthead">{{think.baby_name}}<img ng-show="{{think.baby_sex == 'm'}}" src="img/male.png" /><img ng-show="{{think.baby_sex == 'f'}}" src="img/female.png" />{{think.baby_age}}</div>
+					<div class="u-thinkcontentcontent">
+						{{think.describe}}
+					</div>
+					<div ng-show="{{think.images.length > 0}}" class="u-thinkcontentimg">
+						<div ng-repeat="thinkimg in think.images"><img class="cs-show" src="{{thinkimg.thumbnail_240x240}}" /></div>
+					</div>
+					<div class="u-thinkcontentfoot" ng-show="{{think.plan_date}}">
+						<div>{{think.plan_date}}</div>
+						<div class="u-moments"><img src="img/moments_comment.png">6</div>
+						<div class="u-moments"><img src="img/moments_like.png">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

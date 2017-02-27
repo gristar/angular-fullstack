@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>简介</title>
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bower_components/fullpage.js/jquery.fullPage.css">
-    <link rel="stylesheet" href="../bower_components/animate.css/animate.css">
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script src="../bower_components/fullpage.js/vendors/scrolloverflow.min.js"></script>
+    <!--<script src="../bower_components/fullpage.js/vendors/scrolloverflow.min.js"></script>-->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/fullpage.js/jquery.fullPage.min.js"></script>
-    <script src="../bower_components/alloyfinger/transformjs/transform.js"></script>
+    <!--<script src="../bower_components/alloyfinger/transformjs/transform.js"></script>-->
+    <!--<script src="../../node_modules/echarts/dist/echarts.min.js"></script>-->
+    <!--<script src="js/echarts-wordcloud.min.js"></script>-->
     <script src="js/summary.js"></script>
+    <script src="js/snow.js"></script>
+    <!--<script src="js/skills.js"></script>-->
 </head>
 <body>
 <header class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -51,13 +56,23 @@
 </header>
 <div class="music-ctrl animated infinite rotate">
     <i class="icon iconfont">&#xe605;</i>
-    <audio id="bg-music" autoplay loop>
+    <audio id="bg-music" loop>
         <source src="file/qyqx.mp3" type="audio/ogg">
     </audio>
 </div>
 <div id="main">
     <div class="section active profile">
-        <img class="biu" src="img/shengdanlaoren.png" alt="">
+        <div class="wrapper">
+            <div class="baseinfo">
+                <div class="baseinfo-body">
+                    <div class="name">陈胜</div>
+                    <div class="info">男|未婚|1993年3月生</div>
+                    <div class="phone">17198664233</div>
+                    <div class="email">sheng.fighting@qq.com</div>
+                    <div class="netname">网络标识：Gristar(灰色星星)</div>
+                </div>
+            </div>
+        </div>
         <section class="u-arrow-bottom">
             <div class="pre-wrap">
                 <div class="pre-box1">
@@ -69,7 +84,22 @@
             </div>
         </section>
     </div>
-    <div class="section skills">
+    <div class="section skills" id="chart">
+        <div class="wrapper">
+            <div class="skills-title">核心技能</div>
+            <div class="skills-list">
+                <ul>
+                    <li class="item">html/html5</li>
+                    <li class="item">css/css3</li>
+                    <li class="item">javascript/ES5</li>
+                    <li class="item">React</li>
+                    <li class="item">Angular</li>
+                    <li class="item">响应式开发</li>
+                    <li class="item">node.js/express/mongoDB</li>
+                    <li class="item">linux</li>
+                </ul>
+            </div>
+        </div>
         <section class="u-arrow-bottom">
             <div class="pre-wrap">
                 <div class="pre-box1">
@@ -82,75 +112,89 @@
         </section>
     </div>
     <div class="section experience">
-        <div class="title">工作经历</div>
-        <div class="body">
-            <div class="exp">
-                <div class="exp-brief">
-                    <div class="datetime">2014年11月 -- 2016年3月</div>
-                    <div class="company">软通动力</div>
+        <div class="wrapper">
+            <div class="body">
+                <div class="exp">
+                    <div class="exp-brief">
+                        <div class="datetime animate">2014/11 -- 2016/07</div>
+                        <div class="company animate">软通动力信息技术有限公司 | 深圳 | web前端开发工程师</div>
+                    </div>
+                    <div class="exp-info animate">主要负责web页面制作与维护，通过ajax访问后台接口获取数据</div>
                 </div>
-                <div class="exp-info">负责前端页面的制作与维护</div>
-            </div>
-            <div class="exp">
-                <div class="exp-brief">
-                    <div class="datetime">2016年3月</div>
-                    <div class="company">蜗爱生活</div>
+                <div class="exp">
+                    <div class="exp-brief">
+                        <div class="datetime animate">2016/07 -- 2017/07</div>
+                        <div class="company animate">蜗爱生活科技开发有限公司 | 深圳 | 前端开发工程师</div>
+                    </div>
+                    <div class="exp-info animate">负责前端页面的制作与维护，负责提升用户体验，负责app的混合h5制作</div>
                 </div>
-                <div class="exp-info">负责前端页面的制作与维护</div>
             </div>
         </div>
         <section class="u-arrow-bottom">
-            <div class="pre-wrap">
-                <div class="pre-box1">
-                    <div class="pre1"></div>
-                </div>
-                <div class="pre-box2">
-                    <div class="pre2"></div>
+            <div class="wrapper">
+                <div class="pre-wrap">
+                    <div class="pre-box1">
+                        <div class="pre1"></div>
+                    </div>
+                    <div class="pre-box2">
+                        <div class="pre2"></div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
     <div class="section successful">
-        <div class="slide">
-            <section class="u-arrow-right">
-                <div class="pre-wrap-right">
-                    <div class="pre-box3">
-                        <div class="pre3"></div>
+        <div class="snow-container"></div>
+        <div class="wrapper">
+            <div class="slide">
+                <section class="u-arrow-right">
+                    <div class="pre-wrap-right">
+                        <div class="pre-box3">
+                            <div class="pre3"></div>
+                        </div>
+                        <div class="pre-box4">
+                            <div class="pre4"></div>
+                        </div>
                     </div>
-                    <div class="pre-box4">
-                        <div class="pre4"></div>
+                </section>
+            </div>
+            <div class="slide">
+                <section class="u-arrow-right">
+                    <div class="pre-wrap-right">
+                        <div class="pre-box3">
+                            <div class="pre3"></div>
+                        </div>
+                        <div class="pre-box4">
+                            <div class="pre4"></div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <div class="slide">
+                <section class="u-arrow-right">
+                    <div class="pre-wrap-right">
+                        <div class="pre-box3">
+                            <div class="pre3"></div>
+                        </div>
+                        <div class="pre-box4">
+                            <div class="pre4"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="slide">
-            <section class="u-arrow-right">
-                <div class="pre-wrap-right">
-                    <div class="pre-box3">
-                        <div class="pre3"></div>
-                    </div>
-                    <div class="pre-box4">
-                        <div class="pre4"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="slide">
-            <section class="u-arrow-right">
-                <div class="pre-wrap-right">
-                    <div class="pre-box3">
-                        <div class="pre3"></div>
-                    </div>
-                    <div class="pre-box4">
-                        <div class="pre4"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
     </div>
-    <div class="section evaluation"></div>
+    <div class="section evaluation">
+        <div class="wrapper">
+            <div class="info">
+                <p>1年4个月web前端开发工作经验，熟练使用html/html5、css/css3、JQuery、Ajax、json。</p>
+                <p>对语意化开发、数据与表现分离有一定了解，熟悉响应式布局，熟悉java后台开发。</p>
+                <p>熟练使用Dreamweaver、Hbuilder、Eclipse、SVN、Git编程工具。</p>
+                <p>熟练使用Chrome、IE、FireFox浏览器调试工具对页面结构、样式、js进行调试修改。</p>
+                <p>英语四级，能看懂一些英文API文档。非常热爱web前端开发，喜欢钻研学习各种前端技术，能严格遵守编程规范。</p>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

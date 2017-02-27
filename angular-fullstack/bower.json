@@ -19,6 +19,7 @@
     "jquery-1.12.4": "jquery#1.12.4",
     "angular-resource": "^1.5.8",
     "animate.css": "^3.5.2",
-    "alloyfinger": "*"
+    "alloyfinger": "*",
+    "three.js": "^0.84.0"
   }
 }

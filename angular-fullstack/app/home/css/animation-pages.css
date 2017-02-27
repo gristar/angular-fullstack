@@ -1,0 +1,107 @@
+.profile .baseinfo {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+@media (min-width: 768px) {
+  .profile .baseinfo {
+    width: 330px;
+    margin-right: 60px;
+    float: right;
+  }
+}
+.profile .baseinfo-body .name {
+  font-size: 4.6rem;
+  color: #962408;
+  background-image: -webkit-linear-gradient(92deg, #00AAFF, #33BBFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bounceInLeft 1s ease both;
+}
+.profile .baseinfo-body .info {
+  animation: fadeInUp .8s ease .7s both;
+}
+.profile .baseinfo-body .phone {
+  animation: fadeInUp .8s ease 1.2s;
+  animation-fill-mode: both;
+}
+.profile .baseinfo-body .email {
+  animation: fadeInUp .8s ease 1.7s;
+  animation-fill-mode: both;
+}
+.profile .baseinfo-body .netname {
+  animation: fadeInUp 1.2s ease-in 2.2s both;
+}
+.skills {
+  text-align: center;
+}
+.skills-title {
+  font-size: 32px;
+  line-height: 32px;
+  color: #ffffff;
+  animation: bounceIn 1s ease;
+  animation-fill-mode: both;
+  padding-bottom: 20px;
+}
+.skills-list ul li {
+  background: white;
+  font-size: 16px;
+  width: 80%;
+  padding: 8px 0;
+  margin: 20px auto 0;
+}
+.skills-list ul li:nth-of-type(1) {
+  animation: zoomIn .5s ease .7s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(2) {
+  animation: zoomIn .5s ease 1s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(3) {
+  animation: zoomIn .5s ease 1.2s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(4) {
+  animation: zoomIn .5s ease 1.4s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(5) {
+  animation: zoomIn .5s ease 1.6s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(6) {
+  animation: zoomIn .5s ease 1.8s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(7) {
+  animation: zoomIn .5s ease 2s;
+  animation-fill-mode: both;
+}
+.skills-list ul li:nth-of-type(8) {
+  animation: zoomIn .5s ease 2.2s;
+  animation-fill-mode: both;
+}
+.experience .body .exp {
+  padding: 50px;
+}
+.experience .body .exp-brief {
+  padding-left: 15px;
+  margin-left: -25px;
+  line-height: 1.5em;
+  border-left: 10px solid #F19318;
+}
+.experience .body .exp-brief .datetime {
+  color: brown;
+}
+.experience .body .exp-info {
+  margin-top: 15px;
+}
+.experience .body .exp:nth-child(1) {
+  animation: slideInRight .8s ease;
+  animation-fill-mode: both;
+}
+.experience .body .exp:nth-child(2) {
+  animation: slideInRight .8s ease .6s;
+  animation-fill-mode: both;
+}

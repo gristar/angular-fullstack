@@ -83,18 +83,23 @@ $(function () {
 
         //events
         onLeave: function (index, nextIndex, direction) {
+            $('.section').eq(index-1).find('.wrapper').hide();
 
         },
         afterLoad: function (anchorLink, index) {
+            // $(".section").not(":nth-child("+index+")").find(".animate").css("opacity",0);
+            // $(".section:nth-child("+index+") .animate").css("opacity",1);
+            console.log(index, "位置");
+            $('.section').eq(index-1).find('.wrapper').show();
             switch (index) {
                 case 1: {
+                    // $('.profile').css('background',"#c21500");
                     $('.music-ctrl i').css('color', '#490093');
                     $('.navbar').css('background', 'rgba(0, 0, 0, .5)');
-                    setAinimate('.biu', 'bounceInUp');
                     break;
                 }
                 case 2: {
-                    $('.music-ctrl i').css('color', '#F8F7E2');
+                    $('.music-ctrl i').css('color', '#00CCCC');
                     $('.navbar').css('background', 'rgba(35, 180, 224, .5)');
                     break;
                 }
@@ -104,6 +109,7 @@ $(function () {
                     break;
                 }
                 case 4: {
+                    $.snow();
                     $('.music-ctrl i').css('color', '#B9A499');
                     $('.navbar').css('background', 'rgba(185, 164, 153, .5)');
                     break;

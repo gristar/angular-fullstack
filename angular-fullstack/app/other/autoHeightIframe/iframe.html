@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe foo</title>
+</head>
+<body>
+<div><button id="btn-foo">foo.html</button> <button id="btn-bar">bar.html</button></div>
+<iframe src="bar.html" frameborder="0" id="main_iframe" style="min-width: 1000px; width: 81%;;">
+
+</iframe>
+<script src="../../bower_components/jquery-1.12.4/dist/jquery.min.js"></script>
+<script>
+    $(function(){
+        autoheight();
+        function autoheight() {
+            $("#main_iframe").load(function () {
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 100);
+                var iframeH = 0;
+                if (navigator.userAgent.search("MSIE") != -1) {
+                    iframeH = $(this).contents().height();
+                } else {
+                    iframeH = $(this).contents().find("html").height();
+                }
+                iframeH = iframeH > 300 ? iframeH : 300;
+                $(this).css("height", iframeH + "px");
+            });
+        }
+        $('#btn-bar').on('click', function(){
+            $("#main_iframe").prop('src','bar.html');
+        })
+        $('#btn-foo').on('click', function(){
+            $("#main_iframe").prop('src','foo.html');
+        })
+    });
+</script>
+</body>
+</html>
